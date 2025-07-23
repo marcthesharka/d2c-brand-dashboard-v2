@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+apps/*/node_modules/
+
+# Build output
+dist/
+apps/*/dist/
+.next/
+apps/*/.next/
+
+# System files
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.*
+*.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Static export
+out/
+
+# Misc
+*.swp
+*.swo
+
+# Ignore lockfiles if desired (uncomment if you don't want to track them)
+# package-lock.json
+# yarn.lock 
