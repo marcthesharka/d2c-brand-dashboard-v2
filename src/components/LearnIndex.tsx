@@ -60,11 +60,11 @@ const LearnIndex: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>David Protein Cod Review: Is This the Best Protein-Rich Food for 2025? | Bodega</title>
-        <meta name="description" content="We review David Protein's new Cod Protein—nutritional benefits, taste, and why it might be the best protein-rich food for 2025." />
-        <meta name="keywords" content="David Protein, Cod Protein, best protein-rich food, protein review, 2025, high protein, low fat, nutrition, tuna, salmon, supplement" />
-        <meta property="og:title" content="David Protein Cod Review: Is This the Best Protein-Rich Food for 2025? | Bodega" />
-        <meta property="og:description" content="We review David Protein's new Cod Protein—nutritional benefits, taste, and why it might be the best protein-rich food for 2025." />
+        <title>What the moderators are eating and drinking | Bodega</title>
+        <meta name="description" content="We'll keep it real with you. No BS, actual reviews." />
+        <meta name="keywords" content="D2C food brands, food business, beverage brands, Instagram marketing, food startup, direct to consumer" />
+        <meta property="og:title" content="What the moderators are eating and drinking | Bodega" />
+        <meta property="og:description" content="We'll keep it real with you. No BS, actual reviews." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourdomain.com/learn" />
         <link rel="canonical" href="https://yourdomain.com/learn" />
@@ -77,39 +77,49 @@ const LearnIndex: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              David Protein Cod Review: Is This the Best Protein-Rich Food for 2025?
+              What the moderators are eating and drinking
             </h1>
             <div className="flex justify-center mb-6">
-              {/* Add your GIF or image here later */}
+              <img 
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2N0YzdvNXd4dXNtOWtnbW04MDE1Nm9teGZtYzZzYXpucm4ydmMxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/93lEttRMS3UpxcIvPG/giphy.gif" 
+                alt="Joey Chestnut eating hot dogs" 
+                className="rounded shadow max-h-32" 
+              />
             </div>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              We tried David Protein's new Cod Protein so you don't have to. Get the honest scoop on nutrition, taste, and why cod might be a better protein option than tuna or salmon for 2025.
+              We'll keep it real with you. No BS, actual reviews.
             </p>
           </div>
 
-          {/* Featured Article */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
-            <div className="flex items-center mb-3">
-              <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2 py-0.5 rounded">
-                {articles[0].category}
-              </span>
-              <span className="text-gray-500 text-xs ml-3">{articles[0].readTime}</span>
-            </div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">
-              <a href={`/learn/${articles[0].slug}`} className="hover:text-emerald-600 transition-colors">
-                {articles[0].title}
-              </a>
-            </h2>
-            <p className="text-sm text-gray-600 mb-3">{articles[0].description}</p>
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-gray-500">Published {new Date(articles[0].publishedDate).toLocaleDateString()}</span>
-              <a 
-                href={`/learn/${articles[0].slug}`}
-                className="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
-              >
-                Read more →
-              </a>
-            </div>
+          {/* Articles Grid */}
+          <div className="grid gap-4 md:grid-cols-2">
+            {articles.map((article) => (
+              <article key={article.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2 py-0.5 rounded">
+                    {article.category}
+                  </span>
+                  <span className="text-gray-500 text-xs ml-2">{article.readTime}</span>
+                </div>
+                <h3 className="text-base font-semibold text-gray-900 mb-2">
+                  <a href={`/learn/${article.slug}`} className="hover:text-emerald-600 transition-colors">
+                    {article.title}
+                  </a>
+                </h3>
+                <p className="text-xs text-gray-600 mb-3">{article.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">
+                    {new Date(article.publishedDate).toLocaleDateString()}
+                  </span>
+                  <a 
+                    href={`/learn/${article.slug}`}
+                    className="text-emerald-600 hover:text-emerald-700 text-xs font-medium"
+                  >
+                    Read more →
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
 
           {/* Newsletter Signup */}
