@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from './Header';
+import { newsletterService } from '../services/newsletterService';
 
 interface Article {
   id: string;
@@ -43,6 +44,37 @@ const articles: Article[] = [
 ];
 
 const LearnIndex: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [subscriptionMessage, setSubscriptionMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+
+    setIsSubscribing(true);
+    setSubscriptionMessage(null);
+
+    try {
+      const result = await newsletterService.subscribe(email.trim());
+      setSubscriptionMessage({
+        type: result.success ? 'success' : 'error',
+        text: result.message
+      });
+
+      if (result.success) {
+        setEmail('');
+      }
+    } catch (error) {
+      setSubscriptionMessage({
+        type: 'error',
+        text: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -73,7 +105,7 @@ const LearnIndex: React.FC = () => {
               />
             </div>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Fun, curated content and guides for D2C food & beverage fans.
+              We'll keep it real with you. No BS, actual reviews.
             </p>
           </div>
 
@@ -136,21 +168,35 @@ const LearnIndex: React.FC = () => {
           {/* Newsletter Signup */}
           <div className="bg-emerald-50 rounded-lg p-4 mt-8 text-center">
             <h3 className="text-base font-semibold text-gray-900 mb-2">
-              Get the latest insights delivered to your inbox
+              We'll tell you what we're following by email too
             </h3>
             <p className="text-sm text-gray-600 mb-3">
-              Join thousands of food and beverage entrepreneurs getting weekly tips and strategies.
+              Join thousands of people curious to know the latest in food & beverage
             </p>
-            <div className="flex max-w-sm mx-auto">
+            
+            <form onSubmit={handleSubscribe} className="flex max-w-sm mx-auto">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                disabled={isSubscribing}
               />
-              <button className="px-4 py-1.5 text-sm bg-emerald-600 text-white rounded-r-md hover:bg-emerald-700 transition-colors">
-                Subscribe
+              <button 
+                type="submit"
+                disabled={isSubscribing || !email.trim()}
+                className="px-4 py-1.5 text-sm bg-emerald-600 text-white rounded-r-md hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+            </form>
+
+            {subscriptionMessage && (
+              <div className={`mt-3 text-sm ${subscriptionMessage.type === 'success' ? 'text-emerald-600' : 'text-red-600'}`}>
+                {subscriptionMessage.text}
+              </div>
+            )}
           </div>
         </div>
       </div>
