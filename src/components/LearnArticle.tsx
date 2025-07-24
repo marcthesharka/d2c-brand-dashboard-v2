@@ -16,98 +16,41 @@ interface Article {
   tags: string[];
 }
 
-// Mock articles database - in production, this would come from your CMS or database
 const articles: Record<string, Article> = {
-  'how-to-launch-d2c-food-brand-2024': {
+  'david-protein-cod-review-best-protein-rich-food-2025': {
     id: '1',
-    title: 'How to Launch a D2C Food Brand in 2024',
-    description: 'Complete guide to launching your direct-to-consumer food brand, from concept to first sale.',
-    slug: 'how-to-launch-d2c-food-brand-2024',
+    title: "David Protein Cod Review: Is This the Best Protein-Rich Food for 2025?",
+    description: "We review David Protein's new Cod Protein—nutritional benefits, taste, and why it might be the best protein-rich food for 2025.",
+    slug: 'david-protein-cod-review-best-protein-rich-food-2025',
     content: `
-      <h2>Introduction</h2>
-      <p>Launching a direct-to-consumer (D2C) food brand in 2024 requires a strategic approach that combines traditional business fundamentals with modern digital marketing tactics. This comprehensive guide will walk you through every step of the process.</p>
-      
-      <h2>1. Market Research and Validation</h2>
-      <p>Before you invest time and money into your food brand, you need to validate your concept. Start by identifying your target audience and understanding their pain points.</p>
-      
-      <h3>Key Questions to Answer:</h3>
+      <h2>David Protein's New Cod Protein: The Review</h2>
+      <p><strong>Let’s get this out of the way:</strong> If you’re looking for a protein powder that tastes like a birthday cake, this is not it. If you want to feel like you just licked a Norwegian fishing boat, you’re in the right place.</p>
+      <p>David Protein’s new <strong>Cod Protein</strong> is exactly what it says on the tin: clean, pure, straight-up cod. No artificial flavors, no sweeteners, no "hint of vanilla" to mask the fact that you are, in fact, drinking fish. It’s protein for people who want results, not dessert.</p>
+      <h3>Nutritional Benefits: Why Cod Protein?</h3>
+      <p>Cod is one of the leanest, most protein-rich foods you can eat. Compared to tuna or salmon, cod has a higher protein-to-fat ratio, making it a great choice for anyone looking to maximize protein intake while keeping fat low. Each serving of David Protein Cod Protein packs a punch of high-quality, complete protein with minimal calories and almost zero fat. If you’re serious about building muscle or just want a clean protein source, cod is hard to beat.</p>
       <ul>
-        <li>Who is your ideal customer?</li>
-        <li>What problem does your product solve?</li>
-        <li>How big is your target market?</li>
-        <li>What are your competitors doing?</li>
+        <li><strong>Cod vs. Tuna:</strong> Cod has less mercury, less fat, and a milder flavor. Tuna is great, but cod is cleaner and lighter.</li>
+        <li><strong>Cod vs. Salmon:</strong> Salmon is higher in healthy fats (omega-3s), but if you want pure protein, cod wins for leanness.</li>
       </ul>
-      
-      <h2>2. Product Development</h2>
-      <p>Your product is the foundation of your brand. Focus on creating something that's not just good, but exceptional. Consider factors like taste, packaging, shelf life, and scalability.</p>
-      
-      <h2>3. Brand Identity and Story</h2>
-      <p>Your brand story should resonate with your target audience. It's not just about what you sell, but why you sell it. Your story should be authentic, compelling, and consistent across all touchpoints.</p>
-      
-      <h2>4. Digital Presence and Marketing</h2>
-      <p>In today's digital age, your online presence is crucial. Focus on building a strong Instagram following, creating valuable content, and engaging with your community.</p>
-      
-      <h2>5. E-commerce Setup</h2>
-      <p>Choose the right e-commerce platform for your needs. Consider factors like ease of use, customization options, payment processing, and shipping integrations.</p>
-      
-      <h2>Conclusion</h2>
-      <p>Launching a D2C food brand is challenging but rewarding. Focus on creating an exceptional product, building a strong brand, and connecting with your audience authentically.</p>
-    `,
-    publishedDate: '2024-01-15',
-    readTime: '8 min read',
-    category: 'Launch Guide',
-    author: 'Bodega Team',
-    tags: ['D2C', 'Food Brand', 'Launch Guide', 'Marketing', 'E-commerce']
-  },
-  'instagram-growth-food-brands-guide': {
-    id: '2',
-    title: 'The Ultimate Guide to Instagram Growth for Food Brands',
-    description: 'Proven strategies to grow your food brand\'s Instagram following and drive sales.',
-    slug: 'instagram-growth-food-brands-guide',
-    content: `
-      <h2>Why Instagram is Crucial for Food Brands</h2>
-      <p>Instagram has become the go-to platform for food discovery and brand building. With over 2 billion monthly active users, it's where your potential customers are spending their time.</p>
-      
-      <h2>Content Strategy</h2>
-      <p>Your content should be visually appealing, authentic, and valuable to your audience. Mix product shots with behind-the-scenes content, user-generated content, and educational posts.</p>
-      
-      <h2>Hashtag Strategy</h2>
-      <p>Use a mix of popular and niche hashtags to increase your discoverability. Research hashtags that your target audience is using and create a branded hashtag for your community.</p>
-      
-      <h2>Engagement Tactics</h2>
-      <p>Engage with your followers authentically. Respond to comments, like and comment on relevant posts, and create interactive content like polls and questions.</p>
-    `,
-    publishedDate: '2024-01-10',
-    readTime: '12 min read',
-    category: 'Marketing',
-    author: 'Bodega Team',
-    tags: ['Instagram', 'Social Media', 'Marketing', 'Growth']
-  },
-  'moderators-eating-drinking-weekly': {
-    id: '3',
-    title: 'What the Moderators Are Eating and Drinking This Week',
-    description: 'Weekly roundup of the hottest food and beverage trends from our community moderators.',
-    slug: 'moderators-eating-drinking-weekly',
-    content: `
-      <h2>This Week's Hot Picks</h2>
-      <p>Our community moderators are always on the lookout for the latest and greatest in food and beverage. Here's what they're loving this week.</p>
-      
-      <h2>Trending Products</h2>
+      <h3>First Impressions</h3>
       <ul>
-        <li>Functional beverages with adaptogens</li>
-        <li>Plant-based protein snacks</li>
-        <li>Gut-health focused foods</li>
-        <li>Sustainable packaging innovations</li>
+        <li><strong>Smell:</strong> Like a fish market at 7am. Not for the faint of heart.</li>
+        <li><strong>Mixability:</strong> Surprisingly good! No weird clumps, just a smooth, slightly oceanic beverage.</li>
+        <li><strong>Color:</strong> Pale, off-white. Looks innocent. Tastes... not innocent.</li>
       </ul>
-      
-      <h2>What's Next</h2>
-      <p>Keep an eye on these emerging trends that our moderators are predicting will be big in the coming months.</p>
+      <h3>The Taste Test</h3>
+      <p>We tried it straight with water (for science). The verdict? <em>It’s not bad, but it’s definitely not good in the way you think.</em> It’s clean, it’s pure, and it’s 100% cod. If you’ve ever wanted to shotgun a protein shake and then immediately go deep-sea fishing, this is your moment.</p>
+      <p>With a little lemon and some herbs? Actually, not terrible. We’re not saying you should serve it at your next dinner party, but if you’re serious about protein and don’t care about taste, this is as real as it gets.</p>
+      <h3>Final Thoughts</h3>
+      <p>David Protein’s Cod Protein is for the hardcore. The no-nonsense. The “I eat for macros, not for fun” crowd. If you want to impress your gym bros or just want to tell people you drank a cod, this is your new go-to.</p>
+      <p><strong>Would we drink it again?</strong> ...Maybe. But only if we’re feeling particularly jacked and a little bit nautical.</p>
+      <p><em>Stay tuned for next week’s digest, where we try something that hopefully doesn’t taste like the Atlantic.</em></p>
     `,
-    publishedDate: '2024-01-08',
-    readTime: '5 min read',
-    category: 'Trends',
+    publishedDate: '2025-07-21',
+    readTime: '4 min read',
+    category: 'Weekly Digest',
     author: 'Bodega Moderators',
-    tags: ['Trends', 'Food', 'Beverage', 'Community']
+    tags: ['David Protein', 'Cod Protein', 'best protein-rich food', 'protein review', '2025', 'nutrition', 'tuna', 'salmon', 'supplement', 'high protein', 'low fat']
   }
 };
 
