@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://d2cbodega.com/</loc>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://d2cbodega.com/learn</loc>
+    <loc>https://yourdomain.com/learn</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://d2cbodega.com/learn/test-article</loc>
+    <loc>https://yourdomain.com/learn/how-to-launch-d2c-food-brand-2024</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/learn/instagram-growth-food-brands-guide</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/learn/moderators-eating-drinking-weekly</loc>
+    <lastmod>2024-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset> 

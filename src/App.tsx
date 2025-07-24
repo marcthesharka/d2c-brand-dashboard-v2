@@ -6,49 +6,15 @@ import Stats from './components/Stats';
 import Pagination from './components/Pagination';
 import AddBrandForm from './components/AddBrandForm';
 import Footer from './components/Footer';
-import { Brand, PaginationInfo } from './types/Brand';
+import LearnIndex from './components/LearnIndex';
+import LearnArticle from './components/LearnArticle';
+import { Brand, PaginationInfo, AnalyticsData } from './types/Brand';
 import { brandService } from './services/brandService';
 import { analyticsService } from './services/analyticsService';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-// Placeholder LearnIndex component
-const LearnIndex: React.FC = () => (
-  <>
-    <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
-    <div className="max-w-2xl mx-auto py-12">
-      <Helmet>
-        <title>What the moderators are eating and drinking | Bodega</title>
-        <meta name="description" content="See what the Bodega moderators are eating and drinking. Fun, curated content and guides for D2C food & beverage fans." />
-      </Helmet>
-      <h1 className="text-2xl font-bold mb-4">What the moderators are eating and drinking</h1>
-      <div className="flex justify-center mb-6">
-        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2N0YzdvNXd4dXNtOWtnbW04MDE1Nm9teGZtYzZzYXpucm4ydmMxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/93lEttRMS3UpxcIvPG/giphy.gif" alt="Joey Chestnut eating hot dogs" className="rounded shadow max-h-48" />
-      </div>
-      <ul>
-        <li>
-          <a href="/learn/test-article" className="text-emerald-600 hover:underline">How to Launch a D2C Food Brand (Test Article)</a>
-        </li>
-      </ul>
-    </div>
-  </>
-);
 
-// Placeholder LearnArticle component
-const LearnArticle: React.FC = () => (
-  <>
-    <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
-    <div className="max-w-2xl mx-auto py-12">
-      <Helmet>
-        <title>How to Launch a D2C Food Brand | Bodega</title>
-        <meta name="description" content="A sample article for the Bodega learn section. Learn how to launch a D2C food brand and more." />
-      </Helmet>
-      <h1 className="text-2xl font-bold mb-4">How to Launch a D2C Food Brand (Test Article)</h1>
-      <p className="mb-4 text-gray-700">This is a sample article for the new /learn section. Here you can write long-form content, guides, and SEO-focused posts to drive traffic to your site.</p>
-      <p className="text-gray-500">(Replace this with real content and dynamic article loading in the future.)</p>
-    </div>
-  </>
-);
 
 const ITEMS_PER_PAGE = 20;
 
@@ -85,7 +51,7 @@ const App: React.FC = () => {
         let hotScore = 0;
         let normalizedGrowth = 0;
         let normalizedFollowers = 0;
-        let analyticsObj = null;
+        let analyticsObj: AnalyticsData | undefined = undefined;
         if (brand.instagram_growth_7d !== undefined && brand.instagram_growth_7d !== null) {
           // Use real 7d growth
           normalizedGrowth = Math.min((brand.instagram_growth_7d / 10) * 100, 100);
@@ -211,7 +177,7 @@ const App: React.FC = () => {
     // Update the brand's analytics in state
     setBrands(prev => prev.map(brand => 
       brand.id === brandId 
-        ? { ...brand, analytics: analyticsService.getBrandAnalytics(brandId) }
+        ? { ...brand, analytics: analyticsService.getBrandAnalytics(brandId) || undefined }
         : brand
     ));
   };
@@ -351,5 +317,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-'push commit'
