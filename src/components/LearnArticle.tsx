@@ -161,39 +161,39 @@ const LearnArticle: React.FC = () => {
       <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
       
       <div className="min-h-screen bg-gray-50">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Article Header */}
-          <header className="mb-8">
-            <div className="flex items-center mb-4">
-              <span className="bg-emerald-100 text-emerald-800 text-sm font-medium px-3 py-1 rounded-full">
+          <header className="mb-6">
+            <div className="flex items-center mb-3">
+              <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2 py-0.5 rounded">
                 {article.category}
               </span>
-              <span className="text-gray-500 text-sm ml-4">{article.readTime}</span>
+              <span className="text-gray-500 text-xs ml-3">{article.readTime}</span>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">{article.title}</h1>
-            <p className="text-xl text-gray-600 mb-6">{article.description}</p>
-            <div className="flex items-center justify-between text-sm text-gray-500">
+            <h1 className="text-2xl font-bold text-gray-900 mb-3">{article.title}</h1>
+            <p className="text-base text-gray-600 mb-4">{article.description}</p>
+            <div className="flex items-center justify-between text-xs text-gray-500">
               <span>By {article.author}</span>
               <span>Published {new Date(article.publishedDate).toLocaleDateString()}</span>
             </div>
           </header>
 
           {/* Article Content */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
             <div 
-              className="prose prose-lg max-w-none"
+              className="prose prose-sm max-w-none"
               dangerouslySetInnerHTML={{ __html: article.content }}
             />
           </div>
 
           {/* Tags */}
-          <div className="mb-8">
-            <h3 className="text-sm font-medium text-gray-900 mb-3">Tags:</h3>
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-6">
+            <h3 className="text-xs font-medium text-gray-900 mb-2">Tags:</h3>
+            <div className="flex flex-wrap gap-1">
               {article.tags.map(tag => (
                 <span 
                   key={tag}
-                  className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                  className="bg-gray-100 text-gray-800 text-xs px-2 py-0.5 rounded"
                 >
                   {tag}
                 </span>
@@ -205,7 +205,7 @@ const LearnArticle: React.FC = () => {
           <div className="text-center">
             <a 
               href="/learn" 
-              className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium"
+              className="inline-flex items-center text-emerald-600 hover:text-emerald-700 text-sm font-medium"
             >
               ← Back to all articles
             </a>

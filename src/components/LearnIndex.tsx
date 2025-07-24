@@ -46,11 +46,11 @@ const LearnIndex: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Food & Beverage Brand Guides & Insights | Bodega</title>
-        <meta name="description" content="Expert guides, tips, and insights for D2C food and beverage brands. Learn how to launch, grow, and scale your food business with proven strategies." />
+        <title>What the moderators are eating and drinking | Bodega</title>
+        <meta name="description" content="See what the Bodega moderators are eating and drinking. Fun, curated content and guides for D2C food & beverage fans." />
         <meta name="keywords" content="D2C food brands, food business, beverage brands, Instagram marketing, food startup, direct to consumer" />
-        <meta property="og:title" content="Food & Beverage Brand Guides & Insights | Bodega" />
-        <meta property="og:description" content="Expert guides, tips, and insights for D2C food and beverage brands." />
+        <meta property="og:title" content="What the moderators are eating and drinking | Bodega" />
+        <meta property="og:description" content="See what the Bodega moderators are eating and drinking. Fun, curated content and guides for D2C food & beverage fans." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourdomain.com/learn" />
         <link rel="canonical" href="https://yourdomain.com/learn" />
@@ -59,36 +59,43 @@ const LearnIndex: React.FC = () => {
       <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
       
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Hero Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Food & Beverage Brand Insights
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              What the moderators are eating and drinking
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Expert guides, tips, and strategies to help you launch, grow, and scale your D2C food and beverage brand.
+            <div className="flex justify-center mb-6">
+              <img 
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2N0YzdvNXd4dXNtOWtnbW04MDE1Nm9teGZtYzZzYXpucm4ydmMxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/93lEttRMS3UpxcIvPG/giphy.gif" 
+                alt="Joey Chestnut eating hot dogs" 
+                className="rounded shadow max-h-32" 
+              />
+            </div>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              Fun, curated content and guides for D2C food & beverage fans.
             </p>
           </div>
 
           {/* Featured Article */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-            <div className="flex items-center mb-4">
-              <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-0.5 rounded">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+            <div className="flex items-center mb-3">
+              <span className="bg-emerald-100 text-emerald-800 text-xs font-medium px-2 py-0.5 rounded">
                 {articles[0].category}
               </span>
-              <span className="text-gray-500 text-sm ml-4">{articles[0].readTime}</span>
+              <span className="text-gray-500 text-xs ml-3">{articles[0].readTime}</span>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">
               <a href={`/learn/${articles[0].slug}`} className="hover:text-emerald-600 transition-colors">
                 {articles[0].title}
               </a>
             </h2>
-            <p className="text-gray-600 mb-4">{articles[0].description}</p>
+            <p className="text-sm text-gray-600 mb-3">{articles[0].description}</p>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-500">Published {new Date(articles[0].publishedDate).toLocaleDateString()}</span>
+              <span className="text-xs text-gray-500">Published {new Date(articles[0].publishedDate).toLocaleDateString()}</span>
               <a 
                 href={`/learn/${articles[0].slug}`}
-                className="text-emerald-600 hover:text-emerald-700 font-medium"
+                className="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
               >
                 Read more →
               </a>
@@ -96,28 +103,28 @@ const LearnIndex: React.FC = () => {
           </div>
 
           {/* Articles Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             {articles.slice(1).map((article) => (
-              <article key={article.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-3">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+              <article key={article.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded">
                     {article.category}
                   </span>
-                  <span className="text-gray-500 text-sm ml-3">{article.readTime}</span>
+                  <span className="text-gray-500 text-xs ml-2">{article.readTime}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-base font-semibold text-gray-900 mb-2">
                   <a href={`/learn/${article.slug}`} className="hover:text-emerald-600 transition-colors">
                     {article.title}
                   </a>
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">{article.description}</p>
+                <p className="text-xs text-gray-600 mb-3">{article.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500">
                     {new Date(article.publishedDate).toLocaleDateString()}
                   </span>
                   <a 
                     href={`/learn/${article.slug}`}
-                    className="text-emerald-600 hover:text-emerald-700 text-sm font-medium"
+                    className="text-emerald-600 hover:text-emerald-700 text-xs font-medium"
                   >
                     Read more →
                   </a>
@@ -127,20 +134,20 @@ const LearnIndex: React.FC = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="bg-emerald-50 rounded-lg p-6 mt-12 text-center">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          <div className="bg-emerald-50 rounded-lg p-4 mt-8 text-center">
+            <h3 className="text-base font-semibold text-gray-900 mb-2">
               Get the latest insights delivered to your inbox
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-sm text-gray-600 mb-3">
               Join thousands of food and beverage entrepreneurs getting weekly tips and strategies.
             </p>
-            <div className="flex max-w-md mx-auto">
+            <div className="flex max-w-sm mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-emerald-500"
               />
-              <button className="px-6 py-2 bg-emerald-600 text-white rounded-r-md hover:bg-emerald-700 transition-colors">
+              <button className="px-4 py-1.5 text-sm bg-emerald-600 text-white rounded-r-md hover:bg-emerald-700 transition-colors">
                 Subscribe
               </button>
             </div>
