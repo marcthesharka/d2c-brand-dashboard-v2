@@ -25,10 +25,10 @@ const articles: Record<string, Article> = {
     content: `
       <h2>David Protein's New Cod Protein: The Review</h2>
       <img src="https://www.foodbusinessnews.net/ext/resources/2025/07/17/Adobe-Express---file---2025-07-17T091533.644.webp?height=667&t=1752761799&width=1080" alt="David Protein Cod Product" style="max-width:100%;border-radius:0.5rem;margin-bottom:1.5rem;" />
-      <p><strong>Let’s get this out of the way:</strong> If you’re looking for a protein powder that tastes like a birthday cake, this is not it. If you want to feel like you just licked a Norwegian fishing boat, you’re in the right place.</p>
-      <p>David Protein’s new <strong>Cod Protein</strong> is exactly what it says on the tin: clean, pure, straight-up cod. No artificial flavors, no sweeteners, no "hint of vanilla" to mask the fact that you are, in fact, drinking fish. It’s protein for people who want results, not dessert.</p>
+      <p><strong>Let’s get this out of the way:</strong> If you’re looking for a protein bar that tastes like a birthday cake, this is not it. If you want to feel like you just licked a Norwegian fishing boat, you’re in the right place.</p>
+      <p>David Protein’s new <strong>Cod Protein</strong> is exactly what it says on the pack: clean, pure, straight-up cod. No artificial flavors, no sweeteners, no "hint of vanilla" to mask the fact that you are, in fact, eating fish. It’s protein for people who want results, not dessert.</p>
       <h3>Nutritional Benefits: Why Cod Protein?</h3>
-      <p>Cod is one of the leanest, most protein-rich foods you can eat. Compared to tuna or salmon, cod has a higher protein-to-fat ratio, making it a great choice for anyone looking to maximize protein intake while keeping fat low. Each serving of David Protein Cod Protein packs a punch of high-quality, complete protein with minimal calories and almost zero fat. If you’re serious about building muscle or just want a clean protein source, cod is hard to beat.</p>
+      <p>Cod is one of the leanest, most protein-rich foods you can eat. Compared to tuna or salmon, cod has a higher protein-to-fat ratio, making it a great choice for anyone looking to maximize protein intake while keeping fat low. Each serving of David Protein Cod packs a punch of high-quality, complete protein with minimal calories and almost zero fat. If you’re serious about building muscle or just want a clean protein source, cod is hard to beat.</p>
       <ul>
         <li><strong>Cod vs. Tuna:</strong> Cod has less mercury, less fat, and a milder flavor. Tuna is great, but cod is cleaner and lighter.</li>
         <li><strong>Cod vs. Salmon:</strong> Salmon is higher in healthy fats (omega-3s), but if you want pure protein, cod wins for leanness.</li>
@@ -36,19 +36,19 @@ const articles: Record<string, Article> = {
       <h3>First Impressions</h3>
       <ul>
         <li><strong>Smell:</strong> Like a fish market at 7am. Not for the faint of heart.</li>
-        <li><strong>Mixability:</strong> Surprisingly good! No weird clumps, just a smooth, slightly oceanic beverage.</li>
+        <li><strong>Texture:</strong> Surprisingly good! No weird mush, just a firm, slightly oceanic bite.</li>
         <li><strong>Color:</strong> Pale, off-white. Looks innocent. Tastes... not innocent.</li>
       </ul>
       <h3>The Taste Test</h3>
-      <p>We tried it straight with water (for science). The verdict? <em>It’s not bad, but it’s definitely not good in the way you think.</em> It’s clean, it’s pure, and it’s 100% cod. If you’ve ever wanted to shotgun a protein shake and then immediately go deep-sea fishing, this is your moment.</p>
+      <p>We tried it straight out of the pack (for science). The verdict? <em>It’s not bad, but it’s definitely not good in the way you think.</em> It’s clean, it’s pure, and it’s 100% cod. If you’ve ever wanted to take a bite and then immediately go deep-sea fishing, this is your moment.</p>
       <div style="text-align:center;margin:2rem 0;">
         <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXpnbWNwMDlkNHEzaGJzMnh4em1qd3FjM2JkZnRpOXZhNm5uY2lmayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G5tA3ZSgiBiIo/giphy.gif" alt="Guy getting hit by a fish GIF" style="max-width:320px;border-radius:0.5rem;" />
-        <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">Drinking this literally feels like getting hit in the face by a fish. But hey, that's how you know it's real.</div>
+        <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">Eating this literally feels like getting hit in the face by a fish. But hey, that's how you know it's real.</div>
       </div>
       <p>With a little lemon and some herbs? Actually, not terrible. We’re not saying you should serve it at your next dinner party, but if you’re serious about protein and don’t care about taste, this is as real as it gets.</p>
       <h3>Final Thoughts</h3>
-      <p>David Protein’s Cod Protein is for the hardcore. The no-nonsense. The “I eat for macros, not for fun” crowd. If you want to impress your gym bros or just want to tell people you drank a cod, this is your new go-to.</p>
-      <p><strong>Would we drink it again?</strong> ...Maybe. But only if we’re feeling particularly jacked and a little bit nautical.</p>
+      <p>David Protein’s Cod is for the hardcore. The no-nonsense. The “I eat for macros, not for fun” crowd. If you want to impress your gym bros or just want to tell people you ate a cod, this is your new go-to.</p>
+      <p><strong>Would we eat it again?</strong> ...Maybe. But only if we’re feeling particularly jacked and a little bit nautical.</p>
       <p><em>Stay tuned for next week’s digest, where we try something that hopefully doesn’t taste like the Atlantic.</em></p>
     `,
     publishedDate: '2025-07-21',
