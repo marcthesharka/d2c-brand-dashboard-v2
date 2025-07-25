@@ -17,6 +17,87 @@ interface Article {
 }
 
 const articles: Record<string, Article> = {
+  'best-alcohol-alternatives-2025-liquid-death-bero-brez': {
+    id: '2',
+    title: "Best Alcohol Alternatives for 2025: Liquid Death, Bero, and Brez Reviewed",
+    description: "Looking for the best alcohol alternatives in 2025? We review Liquid Death, Bero, and Brez—three unique non-alcoholic drinks with serious vibes. Find out which is right for your next party.",
+    slug: 'best-alcohol-alternatives-2025-liquid-death-bero-brez',
+    content: `
+      <h2>Best Alcohol Alternatives for 2025: Liquid Death, Bero, and Brez Reviewed</h2>
+      
+      <div style="text-align:center;margin:2rem 0;">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjAxdTRicWk5eDE0N21mdjMybjltMzJ6MzZ4OHF4cDU5OHhlcjVvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/blSTtZehjAZ8I/giphy.gif" alt="Party GIF" style="max-width:400px;border-radius:0.5rem;" />
+        <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">Party vibes without the hangover? Yes, please.</div>
+      </div>
+
+      <h3>Why Go Alcohol-Free?</h3>
+      <p>Let's be real: hangovers are out, hydration is in, and sometimes you just want to vibe without the side effects. Whether you're sober-curious, taking a break, or just want to look cool at the party, these three brands have you covered.</p>
+
+      <h3>Liquid Death: Hardcore Hydration</h3>
+      <img src="https://marketingweek.imgix.net/content/uploads/2024/02/19155639/Liquid-Death_Press_Landscape_1920x1080-1.jpg?auto=compress,format&q=60&w=736&h=429" alt="Liquid Death Water" style="max-width:100%;border-radius:0.5rem;margin-bottom:1.5rem;" />
+      
+      <p><strong>What is it?</strong><br />
+      It's water. In a can. But not just any can—this one looks like it belongs at a metal concert.</p>
+
+      <p><strong>Vibe:</strong></p>
+      <ul>
+        <li>Looks like beer, feels like water</li>
+        <li>Perfect for confusing your friends and staying hydrated</li>
+        <li>No alcohol, no calories, just pure mountain water</li>
+      </ul>
+
+      <p><strong>Why we love it:</strong><br />
+      You get to "murder your thirst" and look like a rockstar, all while drinking H2O. No one will know you're not actually drinking—unless you start crowd surfing.</p>
+
+      <h3>Bero: The Beer Alternative (with a Celebrity Twist)</h3>
+      <img src="https://beerfordriving.com/assets/images/beer/Bero-Tom-Holland-Kingston-Golden-Pils.jpg" alt="Bero Beer Alternative" style="max-width:100%;border-radius:0.5rem;margin-bottom:1.5rem;" />
+      
+      <p><strong>What is it?</strong><br />
+      A non-alcoholic beer alternative that actually tastes good. Oh, and it's started and owned by Tom Holland (yes, Spider-Man).</p>
+
+      <p><strong>Vibe:</strong></p>
+      <ul>
+        <li>All the social fun of beer, none of the next-day regret</li>
+        <li>Crisp, refreshing, and surprisingly complex</li>
+        <li>Great for BBQs, game nights, or pretending you're British royalty</li>
+      </ul>
+
+      <p><strong>Why we love it:</strong><br />
+      You can say, "I'm drinking what Spider-Man drinks." Plus, it's a legit beer experience—minus the hangover.</p>
+
+      <h3>Brez: Microdosed Mushroom Magic</h3>
+      <img src="https://www.drinkbrez.com/cdn/shop/files/brez-social.png?v=1722708085" alt="Brez Mushroom Drink" style="max-width:100%;border-radius:0.5rem;margin-bottom:1.5rem;" />
+      
+      <p><strong>What is it?</strong><br />
+      A microdosed mushroom drink for those who want to get a little funky—without the alcohol.</p>
+
+      <p><strong>Vibe:</strong></p>
+      <ul>
+        <li>Slightly euphoric, totally legal, and hangover-free</li>
+        <li>Tastes like a craft cocktail with a twist</li>
+        <li>For the adventurous, the curious, and the "I want to feel something, but not too much" crowd</li>
+      </ul>
+
+      <p><strong>Why we love it:</strong><br />
+      It's the only drink here that might make you want to dance on a table and then meditate. No hangover, just good vibes.</p>
+
+      <h3>Final Thoughts: Which Alcohol Alternative Is Right for You?</h3>
+      <ul>
+        <li><strong>Liquid Death:</strong> For the hydration hero who wants to look cool</li>
+        <li><strong>Bero:</strong> For the social butterfly who loves a good story (and Tom Holland)</li>
+        <li><strong>Brez:</strong> For the adventurous spirit who wants a little extra "oomph" without the booze</li>
+      </ul>
+
+      <p>No matter your vibe, there's a non-alcoholic drink here for you. Cheers to good times, great friends, and waking up hangover-free.</p>
+
+      <p><em>Stay tuned for more brutally honest reviews and party hacks. Got a favorite alcohol alternative? Let us know!</em></p>
+    `,
+    publishedDate: '2025-07-25',
+    readTime: '5 min read',
+    category: 'Product Reviews',
+    author: 'Bodega Moderators',
+    tags: ['alcohol alternatives', 'non-alcoholic drinks', 'Liquid Death', 'Bero', 'Brez', 'Tom Holland', 'mushroom drinks', 'sober curious', 'hangover free', 'party drinks', '2025', 'best alcohol alternatives']
+  },
   'david-protein-cod-review-best-protein-rich-food-2025': {
     id: '1',
     title: "David Protein Cod Review: Is This the Best Protein-Rich Food for 2025?",
@@ -96,14 +177,14 @@ const LearnArticle: React.FC = () => {
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://yourdomain.com/learn/${article.slug}`} />
+        <meta property="og:url" content={`https://d2cbodega.com/learn/${article.slug}`} />
         <meta property="article:published_time" content={article.publishedDate} />
         <meta property="article:author" content={article.author} />
         <meta property="article:section" content={article.category} />
         {article.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
-        <link rel="canonical" href={`https://yourdomain.com/learn/${article.slug}`} />
+        <link rel="canonical" href={`https://d2cbodega.com/learn/${article.slug}`} />
       </Helmet>
       
       <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />

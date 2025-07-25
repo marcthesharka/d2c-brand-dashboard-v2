@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '2',
+    title: "Best Alcohol Alternatives for 2025: Liquid Death, Bero, and Brez Reviewed",
+    description: "Looking for the best alcohol alternatives in 2025? We review Liquid Death, Bero, and Brez—three unique non-alcoholic drinks with serious vibes.",
+    slug: 'best-alcohol-alternatives-2025-liquid-death-bero-brez',
+    publishedDate: '2025-07-25',
+    readTime: '5 min read',
+    category: 'Product Reviews'
+  },
+  {
     id: '1',
     title: "David Protein Cod Review: Is This the Best Protein-Rich Food for 2025?",
     description: "We review David Protein's new Cod Protein—nutritional benefits, taste, and why it might be the best protein-rich food for 2025.",
@@ -66,8 +75,8 @@ const LearnIndex: React.FC = () => {
         <meta property="og:title" content="What the moderators are eating and drinking | Bodega" />
         <meta property="og:description" content="We'll keep it real with you. No BS, actual reviews." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/learn" />
-        <link rel="canonical" href="https://yourdomain.com/learn" />
+        <meta property="og:url" content="https://d2cbodega.com/learn" />
+        <link rel="canonical" href="https://d2cbodega.com/learn" />
       </Helmet>
       
       <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
