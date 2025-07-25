@@ -25,8 +25,8 @@ const articles: Record<string, Article> = {
     content: `
       <h2>Best Alcohol Alternatives for 2025: Liquid Death, Bero, and Brez Reviewed</h2>
       
-      <div style="text-align:center;margin:2rem 0;">
-        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjAxdTRicWk5eDE0N21mdjMybjltMzJ6MzZ4OHF4cDU5OHhlcjVvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/blSTtZehjAZ8I/giphy.gif" alt="Party GIF" style="max-width:400px;border-radius:0.5rem;" />
+      <div style="text-align:center;margin:2rem 0;display:flex;flex-direction:column;align-items:center;">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjAxdTRicWk5eDE0N21mdjMybjltMzJ6MzZ4OHF4cDU5OHhlcjVvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/blSTtZehjAZ8I/giphy.gif" alt="Party GIF" style="max-width:400px;border-radius:0.5rem;display:block;margin:0 auto;" />
         <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">Party vibes without the hangover? Yes, please.</div>
       </div>
 
