@@ -140,7 +140,11 @@ const articles: Record<string, Article> = {
   }
 };
 
-const LearnArticle: React.FC = () => {
+interface LearnArticleProps {
+  onAddBrand: () => void;
+}
+
+const LearnArticle: React.FC<LearnArticleProps> = ({ onAddBrand }) => {
   const { slug } = useParams<{ slug: string }>();
   const article = slug ? articles[slug] : null;
 
@@ -187,7 +191,7 @@ const LearnArticle: React.FC = () => {
         <link rel="canonical" href={`https://d2cbodega.com/learn/${article.slug}`} />
       </Helmet>
       
-      <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
+      <Header totalBrands={0} filteredCount={0} onAddBrand={onAddBrand} />
       
       <div className="min-h-screen bg-gray-50">
         <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

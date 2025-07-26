@@ -34,7 +34,11 @@ const articles: Article[] = [
   }
 ];
 
-const LearnIndex: React.FC = () => {
+interface LearnIndexProps {
+  onAddBrand: () => void;
+}
+
+const LearnIndex: React.FC<LearnIndexProps> = ({ onAddBrand }) => {
   const [email, setEmail] = useState('');
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [subscriptionMessage, setSubscriptionMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
@@ -79,7 +83,7 @@ const LearnIndex: React.FC = () => {
         <link rel="canonical" href="https://d2cbodega.com/learn" />
       </Helmet>
       
-      <Header totalBrands={0} filteredCount={0} onAddBrand={() => {}} />
+      <Header totalBrands={0} filteredCount={0} onAddBrand={onAddBrand} />
       
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

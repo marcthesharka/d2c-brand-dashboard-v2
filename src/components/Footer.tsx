@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer: React.FC = () => {
   const [showDisclosure, setShowDisclosure] = useState(false);
@@ -6,7 +6,17 @@ const Footer: React.FC = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
-  const [showCookieNotice, setShowCookieNotice] = useState(true);
+  const [showCookieNotice, setShowCookieNotice] = useState(false);
+
+  useEffect(() => {
+    const accepted = localStorage.getItem('cookieAccepted');
+    setShowCookieNotice(!accepted);
+  }, []);
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('cookieAccepted', 'true');
+    setShowCookieNotice(false);
+  };
 
   return (
     <>
@@ -16,7 +26,7 @@ const Footer: React.FC = () => {
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <span>We use cookies to improve your experience. By continuing to use this site, you agree to our use of cookies.</span>
             <button
-              onClick={() => setShowCookieNotice(false)}
+              onClick={handleAcceptCookies}
               className="ml-4 px-3 py-1 bg-emerald-600 text-white rounded text-xs hover:bg-emerald-700"
             >
               Accept

@@ -237,8 +237,8 @@ const App: React.FC = () => {
   return (
     <>
       <Routes>
-        <Route path="/learn" element={<LearnIndex />} />
-        <Route path="/learn/:slug" element={<LearnArticle />} />
+        <Route path="/learn" element={<LearnIndex onAddBrand={() => setShowAddForm(true)} />} />
+        <Route path="/learn/:slug" element={<LearnArticle onAddBrand={() => setShowAddForm(true)} />} />
         <Route path="/" element={
           <div className="min-h-screen bg-gray-50">
             <Header 
@@ -303,10 +303,7 @@ const App: React.FC = () => {
               )}
             </main>
             {showAddForm && (
-              <AddBrandForm
-                onClose={() => setShowAddForm(false)}
-                onBrandAdded={handleBrandAdded}
-              />
+              <AddBrandForm onClose={() => setShowAddForm(false)} />
             )}
           </div>
         } />
