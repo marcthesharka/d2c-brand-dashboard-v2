@@ -49,21 +49,39 @@ async function main() {
     const handle = brand.instagram_handle;
     if (!handle) continue;
 
+    // Check if today's follower count already exists for this brand
+    const { data: existing, error: checkError } = await supabase
+      .from('instagram_followers')
+      .select('id')
+      .eq('instagram_handle', handle)
+      .eq('date', today)
+      .maybeSingle();
+
+    if (checkError) {
+      console.error(`Error checking existing record for ${handle}:`, checkError);
+      continue;
+    }
+
+    if (existing) {
+      console.log(`Already have follower count for ${handle} on ${today}, skipping.`);
+      continue;
+    }
+
+    // Only fetch and insert if not already present
     const followers = await fetchInstagramFollowers(handle);
     if (!followers) {
       console.log(`Could not fetch followers for ${handle}`);
       continue;
     }
 
-    // Insert today's follower count into instagram_followers table
-    await supabase.from('instagram_followers').upsert([
+    await supabase.from('instagram_followers').insert([
       {
         date: today,
         instagram_handle: handle,
         followers,
         brand_id: brand.id,
       }
-    ], { onConflict: 'instagram_handle,date' });
+    ]);
 
     // Update brands table with latest count
     const newSocialMedia = {
