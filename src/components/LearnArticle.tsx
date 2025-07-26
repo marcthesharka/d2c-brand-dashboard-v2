@@ -77,12 +77,16 @@ const articles: Record<string, Article> = {
       </ul>
 
       <h3>My Daily Routine (What Actually Works)</h3>
-      <p>Here's my typical fasting day:</p>
+      <p>Here's my actual daily fasting routine after two years of dialing it in:</p>
 
       <ul>
-        <li><strong>6:30 AM:</strong> Wake up, drink water</li>
-        <li><strong>7:00 AM:</strong> Black coffee (usually La Colombe or STōK)</li>
-        <li><strong>8:00 AM:</strong> Most productive work hours</li>
+        <li><strong>5:30 AM:</strong> Wake up, drink water</li>
+        <li><strong>5:35 AM:</strong> Black coffee (usually La Colombe or STōK)</li>
+        <li><strong>5:45 AM:</strong> Read the news with a clear mind</li>
+        <li><strong>6:00 AM:</strong> Poop (let's be real, coffee works)</li>
+        <li><strong>6:15 AM:</strong> Go for a run or workout</li>
+        <li><strong>7:00 AM:</strong> Get ready and head to work</li>
+        <li><strong>8:00 AM:</strong> Most productive work hours (still fasting, still focused)</li>
         <li><strong>10:00 AM:</strong> Second coffee if needed</li>
         <li><strong>12:00 PM:</strong> First meal (usually protein + healthy fats)</li>
         <li><strong>8:00 PM:</strong> Last meal of the day</li>
