@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '3',
+    title: "Intermittent Fasting 16:8: My Honest Review & Why It's a Productivity Game-Changer",
+    description: "I've been doing 16:8 intermittent fasting for months and it's completely changed my life. Here's my honest review, the science behind it, and the best products to help you maintain your fast.",
+    slug: 'intermittent-fasting-16-8-honest-review-productivity-game-changer',
+    publishedDate: '2025-07-26',
+    readTime: '6 min read',
+    category: 'Health & Wellness'
+  },
+  {
     id: '2',
     title: "Best Alcohol Alternatives for 2025: Liquid Death, Bero, and Brez Reviewed",
     description: "Looking for the best alcohol alternatives in 2025? We review Liquid Death, Bero, and Brez—three unique non-alcoholic drinks with serious vibes.",
