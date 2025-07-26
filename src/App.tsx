@@ -302,12 +302,12 @@ const App: React.FC = () => {
                 </>
               )}
             </main>
-            {showAddForm && (
-              <AddBrandForm onClose={() => setShowAddForm(false)} />
-            )}
           </div>
         } />
       </Routes>
+      {showAddForm && (
+        <AddBrandForm onClose={() => setShowAddForm(false)} />
+      )}
       <Footer />
     </>
   );
