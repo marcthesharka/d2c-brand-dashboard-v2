@@ -53,7 +53,7 @@ const articles: Record<string, Article> = {
     category: 'Product Reviews',
     author: 'Bodega Moderators',
     tags: ['gluten-free snacks', 'RXBAR', 'David Protein', 'Mezcla', 'plant-based', 'high protein', 'D2C snacks', 'healthy snacks', '2025 reviews']
-  }
+  },
   'intermittent-fasting-16-8-honest-review-productivity-game-changer': {
     id: '3',
     title: "Intermittent Fasting 16:8: My Honest Review & Why It's a Productivity Game-Changer",
