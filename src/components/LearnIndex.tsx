@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '4',
+    title: "The Best Gluten-Free Snacks We're Eating in 2025",
+    description: "Tired of only eating hummus, fruit, and hard-boiled eggs? We’ve found three truly gluten-free snacks that are actually good: RXBAR, David Protein, and Mezcla. Here’s our honest (and spicy) review.",
+    slug: 'best-gluten-free-snacks-2025-rxbar-david-mezcla-review',
+    publishedDate: '2025-07-31',
+    readTime: '4 min read',
+    category: 'Product Reviews'
+  },
+  {
     id: '3',
     title: "Intermittent Fasting 16:8: My Honest Review & Why It's a Productivity Game-Changer",
     description: "I've been doing 16:8 intermittent fasting for months and it's completely changed my life. Here's my honest review, the science behind it, and the best products to help you maintain your fast.",
