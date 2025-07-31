@@ -17,6 +17,43 @@ interface Article {
 }
 
 const articles: Record<string, Article> = {
+  'best-gluten-free-snacks-2025-rxbar-david-mezcla-review': {
+    id: '4',
+    title: "The Best Gluten-Free Snacks We're Eating in 2025",
+    description: "Tired of only eating hummus, fruit, and hard-boiled eggs? We’ve found three truly gluten-free snacks that are actually good: RXBAR, David Protein, and Mezcla. Here’s our honest (and spicy) review.",
+    slug: 'best-gluten-free-snacks-2025-rxbar-david-mezcla-review',
+    content: `
+      <h2>The Best Gluten-Free Snacks We're Eating in 2025 🍫🌱</h2>
+
+      <p>Any truly gluten-free eater knows the pain: your pantry is full of <em>fruit</em>, <em>hard boiled eggs</em>, <em>hummus</em>… and maybe some tears. Gluten-free snacking has long been a bleak landscape — limited, bland, and definitely not exciting.</p>
+
+      <p>But we’ve got some good news: the new generation of gluten-free snacks has <strong>arrived</strong>, and they're not just compliant — they’re craveable.</p>
+
+      <p>At <strong>D2C Bodega</strong>, we’ve been taste-testing our way through the gluten-free snack aisle (and then some). Here are three standouts we’re tracking — and snacking on — right now:</p>
+
+      <h3>🥚 RXBAR — The OG Clean Label Protein Bar</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0SeLaxFCABNZhxC7APEHzYBlKRTGo9S91oOS6cXrDfgIUiRxqM5kedgMd2xJBM4WK14Y&usqp=CAU" alt="RXBAR" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>🔥 Spicy Review:</strong> We stan the Chocolate Sea Salt flavor. It's chewy, rich, and gives "I go to Barry’s Bootcamp but also forget to grocery shop." Bonus: the egg white protein actually fills you up — unlike 99% of other bars pretending to.</p>
+
+      <h3>💪 David Protein Snacks — From the RXBAR Founders (Yes, Really)</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo9SIaGyxC8lAO4tAXUOCCmZyr-YJBwkFwwg&s" alt="David Protein" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>🔥 Spicy Review:</strong> The Peanut Butter Bites slap. Think of them as the glow-up of your childhood protein snacks. You get 10g of protein per serving, and they taste like peanut butter cookie dough with a crunch. We see you, David 👀.</p>
+
+      <h3>🌱 Mezcla — Plant-Based Protein Bars That Actually Taste Good</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfdzlXOrTHzy-NkwTEqESKR_y56Gmj9_MIQ&s" alt="Mezcla Bar" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>🔥 Spicy Review:</strong> Mezcla’s packaging and flavors transport you, even if you're stuck at your desk. They're lighter than RXBARs and a bit more crumbly, but we’re into it. Also: they look amazing on Instagram.</p>
+
+      <h3>TL;DR — Gluten-Free Can Slap</h3>
+      <p>We get it — the gluten-free struggle is real. But brands like RXBAR, David, and Mezcla are rewriting the rules, one bar at a time. Whether you’re celiac, GF-curious, or just tired of hummus as a main food group, these snacks deliver.</p>
+
+      <p>📦 You can find all three brands (and more gluten-free gems) at <a href="https://www.d2cbodega.com">d2cbodega.com</a> — where we track the best in D2C food & bev, so you don’t have to.</p>
+    `,
+    publishedDate: '2025-07-31',
+    readTime: '4 min read',
+    category: 'Product Reviews',
+    author: 'Bodega Moderators',
+    tags: ['gluten-free snacks', 'RXBAR', 'David Protein', 'Mezcla', 'plant-based', 'high protein', 'D2C snacks', 'healthy snacks', '2025 reviews']
+  }
   'intermittent-fasting-16-8-honest-review-productivity-game-changer': {
     id: '3',
     title: "Intermittent Fasting 16:8: My Honest Review & Why It's a Productivity Game-Changer",
