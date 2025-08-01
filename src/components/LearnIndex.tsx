@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '5',
+    title: "Top 10 Protein-to-Calorie Ratio Foods for Building Lean Muscle (2025)",
+    description: "Discover the best protein-rich foods for muscle building that you can easily find at any grocery store. From steak to chickpeas, we break down the top 10 foods with the highest protein-to-calorie ratios for optimal lean muscle growth.",
+    slug: 'top-10-protein-calorie-ratio-foods-building-lean-muscle-2025',
+    publishedDate: '2025-08-02',
+    readTime: '7 min read',
+    category: 'Health & Wellness'
+  },
+  {
     id: '4',
     title: "The Best Gluten-Free Snacks We're Eating in 2025",
     description: "Tired of only eating hummus, fruit, and hard-boiled eggs? We’ve found three truly gluten-free snacks that are actually good: RXBAR, David Protein, and Mezcla. Here’s our honest (and spicy) review.",
