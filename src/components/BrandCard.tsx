@@ -38,12 +38,17 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
   };
 
   const handleWebsiteClick = () => {
+    console.log('Visit button clicked for:', brand.name);
+    console.log('Brand website:', brand.website);
+    console.log('Brand affiliate_url:', brand.affiliate_url);
+    
     if (onWebsiteClick) {
       onWebsiteClick(brand.id);
     }
     
     // Get the URL from affiliate_url first, then fall back to website
     const url = brand.affiliate_url || brand.website;
+    console.log('Selected URL:', url);
     
     if (!url || url.trim() === '') {
       console.warn(`No website URL found for brand: ${brand.name}`);
@@ -56,18 +61,30 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
     if (!/^https?:\/\//i.test(cleanUrl)) {
       cleanUrl = `https://${cleanUrl}`;
     }
+    console.log('Clean URL with protocol:', cleanUrl);
     
     // Validate the URL
     try {
       new URL(cleanUrl);
     } catch (error) {
-      console.error(`Invalid URL for ${brand.name}: ${cleanUrl}`);
+      console.error(`Invalid URL for ${brand.name}: ${cleanUrl}`, error);
       alert(`Invalid website URL for ${brand.name}`);
       return;
     }
     
     console.log(`Opening website for ${brand.name}: ${cleanUrl}`);
-    window.open(cleanUrl, '_blank', 'noopener,noreferrer');
+    
+    // Try to open the URL
+    try {
+      const newWindow = window.open(cleanUrl, '_blank', 'noopener,noreferrer');
+      if (!newWindow) {
+        console.error('Popup blocked for:', cleanUrl);
+        alert('Popup blocked. Please allow popups for this site or copy the URL manually.');
+      }
+    } catch (error) {
+      console.error('Error opening URL:', error);
+      alert(`Error opening website for ${brand.name}. Please try again.`);
+    }
   };
 
   // Calculate if brand is new (within past 30 days)
