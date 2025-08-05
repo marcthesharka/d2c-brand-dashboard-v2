@@ -19,7 +19,7 @@ const articles: Article[] = [
     title: "The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate",
     description: "Discover the best caffeine alternatives that give you energy without the coffee jitters. From energy drinks to mushroom beverages, find your perfect pick-me-up.",
     slug: 'coffee-alternatives-energy-drinks-mushroom-drinks-yerba-mate',
-    publishedDate: '2025-01-25',
+    publishedDate: '2025-08-05',
     readTime: '5 min read',
     category: 'Product Reviews'
   },

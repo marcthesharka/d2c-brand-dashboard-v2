@@ -143,7 +143,7 @@ const articles: Record<string, Article> = {
       <p>Whether you're looking to cut back on coffee, try something new, or find a healthier energy source, there's an alternative out there for you. Start with the caffeine content that matches your current coffee intake and adjust from there.</p>
       <p>Remember, the best coffee alternative is the one you'll actually drink and enjoy. Don't be afraid to experiment until you find your perfect match!</p>
     `,
-    publishedDate: '2025-01-25',
+    publishedDate: '2025-08-05',
     readTime: '5 min read',
     category: 'Product Reviews',
     author: 'Bodega Moderators',

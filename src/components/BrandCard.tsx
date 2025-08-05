@@ -74,16 +74,30 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
     
     console.log(`Opening website for ${brand.name}: ${cleanUrl}`);
     
-    // Try to open the URL
+    // Try to open the URL - use a more user-friendly approach
     try {
-      const newWindow = window.open(cleanUrl, '_blank', 'noopener,noreferrer');
-      if (!newWindow) {
-        console.error('Popup blocked for:', cleanUrl);
-        alert('Popup blocked. Please allow popups for this site or copy the URL manually.');
-      }
+      // Create a temporary link element and click it
+      const link = document.createElement('a');
+      link.href = cleanUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } catch (error) {
       console.error('Error opening URL:', error);
-      alert(`Error opening website for ${brand.name}. Please try again.`);
+      // Fallback: try window.open if the link approach fails
+      try {
+        window.open(cleanUrl, '_blank', 'noopener,noreferrer');
+      } catch (fallbackError) {
+        console.error('Fallback also failed:', fallbackError);
+        // Final fallback: copy URL to clipboard
+        navigator.clipboard.writeText(cleanUrl).then(() => {
+          alert(`Website URL copied to clipboard: ${cleanUrl}`);
+        }).catch(() => {
+          alert(`Please visit: ${cleanUrl}`);
+        });
+      }
     }
   };
 
