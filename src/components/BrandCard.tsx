@@ -41,12 +41,33 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
     if (onWebsiteClick) {
       onWebsiteClick(brand.id);
     }
+    
+    // Get the URL from affiliate_url first, then fall back to website
     const url = brand.affiliate_url || brand.website;
-    // Ensure the URL has a protocol
-    const prefixedUrl = url && !/^https?:\/\//i.test(url) ? `https://${url}` : url;
-    if (prefixedUrl) {
-      window.open(prefixedUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!url || url.trim() === '') {
+      console.warn(`No website URL found for brand: ${brand.name}`);
+      alert(`No website available for ${brand.name}`);
+      return;
     }
+    
+    // Clean the URL and ensure it has a protocol
+    let cleanUrl = url.trim();
+    if (!/^https?:\/\//i.test(cleanUrl)) {
+      cleanUrl = `https://${cleanUrl}`;
+    }
+    
+    // Validate the URL
+    try {
+      new URL(cleanUrl);
+    } catch (error) {
+      console.error(`Invalid URL for ${brand.name}: ${cleanUrl}`);
+      alert(`Invalid website URL for ${brand.name}`);
+      return;
+    }
+    
+    console.log(`Opening website for ${brand.name}: ${cleanUrl}`);
+    window.open(cleanUrl, '_blank', 'noopener,noreferrer');
   };
 
   // Calculate if brand is new (within past 30 days)
@@ -130,9 +151,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
           <div className="flex items-center space-x-1">
             <Instagram className="h-3 w-3" />
             <span>{formatFollowers(brand.socialMedia.instagram)}</span>
-            {brand.analytics && brand.analytics.instagramGrowthWoW > 0 && (
-              <TrendingUp className="h-2.5 w-2.5 text-green-500" />
-            )}
+
           </div>
           <a
             href={`https://instagram.com/${brand.instagramHandle.replace(/^@/, '')}`}
@@ -148,7 +167,13 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
         <div className="flex items-center space-x-1 ml-2">
           <button
             onClick={handleWebsiteClick}
-            className="flex items-center space-x-1 text-emerald-600 hover:text-emerald-700 text-xs font-medium px-2 py-1 rounded hover:bg-emerald-50 transition-colors"
+            disabled={!brand.website && !brand.affiliate_url}
+            className={`flex items-center space-x-1 text-xs font-medium px-2 py-1 rounded transition-colors ${
+              brand.website || brand.affiliate_url
+                ? 'text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50'
+                : 'text-gray-400 cursor-not-allowed'
+            }`}
+            title={brand.website || brand.affiliate_url ? `Visit ${brand.name}` : 'No website available'}
           >
             <ExternalLink className="h-3 w-3" />
             <span className="hidden sm:inline">Visit</span>
