@@ -44,44 +44,38 @@ const App: React.FC = () => {
       // Fallback: find max followers for normalization
       const maxFollowers = brandsData.reduce((max, b) => Math.max(max, b.socialMedia.instagram || 0), 0);
 
-      const growthWeight = 0.7;
-      const scaleWeight = 0.3;
+      // New hot score calculation with three factors
+      const followersWeight = 0.4;
+      const establishmentWeight = 0.2;
+      const moderatorWeight = 0.4;
 
       const brandsWithAnalytics = brandsData.map(brand => {
         let hotScore = 0;
-        let normalizedGrowth = 0;
-        let normalizedFollowers = 0;
         let analyticsObj: AnalyticsData | undefined = undefined;
-        if (brand.instagram_growth_7d !== undefined && brand.instagram_growth_7d !== null) {
-          // Use real 7d growth
-          normalizedGrowth = Math.min((brand.instagram_growth_7d / 10) * 100, 100);
-          normalizedFollowers = maxFollowers > 0 ? (brand.socialMedia.instagram / maxFollowers) * 100 : 0;
-          hotScore = (growthWeight * normalizedGrowth) + (scaleWeight * normalizedFollowers);
-          analyticsObj = {
-            websiteClicks: 0,
-            instagramFollowersLastWeek: 0,
-            instagramGrowthWoW: brand.instagram_growth_7d ?? 0,
-            hotScore,
-            lastUpdated: brand.updatedAt || new Date().toISOString(),
-          };
-        } else {
-          // Fallback: hot score based on recency and followers only (no randomness)
-          const recencyWeight = 0.4;
-          const followersWeight = 0.6;
-          const currentYear = new Date().getFullYear();
-          const yearsSinceLaunch = currentYear - (brand.launchYear || currentYear);
-          const maxYears = 10;
-          const recencyScore = Math.max(0, (1 - yearsSinceLaunch / maxYears)) * 100;
-          normalizedFollowers = maxFollowers > 0 ? (brand.socialMedia.instagram / maxFollowers) * 100 : 0;
-          hotScore = Math.max((recencyWeight * recencyScore) + (followersWeight * normalizedFollowers), 0);
-          analyticsObj = {
-            websiteClicks: 0,
-            instagramFollowersLastWeek: 0,
-            instagramGrowthWoW: 0,
-            hotScore,
-            lastUpdated: brand.updatedAt || new Date().toISOString(),
-          };
-        }
+        
+        // Normalize followers (0-100 scale)
+        const normalizedFollowers = maxFollowers > 0 ? (brand.socialMedia.instagram / maxFollowers) * 100 : 0;
+        
+        // Normalize establishment year (newer = higher score, 0-100 scale)
+        const currentYear = new Date().getFullYear();
+        const yearsSinceLaunch = currentYear - (brand.launchYear || currentYear);
+        const maxYears = 10;
+        const establishmentScore = Math.max(0, (1 - yearsSinceLaunch / maxYears)) * 100;
+        
+        // Normalize moderator score (1-10 scale to 0-100 scale)
+        const normalizedModeratorScore = ((brand.moderator_score || 5) / 10) * 100;
+        
+        // Calculate weighted hot score
+        hotScore = (followersWeight * normalizedFollowers) + 
+                   (establishmentWeight * establishmentScore) + 
+                   (moderatorWeight * normalizedModeratorScore);
+        
+        analyticsObj = {
+          currentInstagramFollowers: brand.socialMedia.instagram,
+          hotScore,
+          lastUpdated: brand.updatedAt || new Date().toISOString(),
+        };
+        
         return {
           ...brand,
           analytics: analyticsObj

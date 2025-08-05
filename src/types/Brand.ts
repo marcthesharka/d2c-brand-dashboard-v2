@@ -26,12 +26,11 @@ export interface Brand {
   analytics?: AnalyticsData;
   instagram_growth_7d?: number;
   affiliate_url?: string;
+  moderator_score?: number;
 }
 
 export interface AnalyticsData {
-  websiteClicks: number;
-  instagramFollowersLastWeek: number;
-  instagramGrowthWoW: number;
+  currentInstagramFollowers: number;
   hotScore: number;
   lastUpdated: string;
 }

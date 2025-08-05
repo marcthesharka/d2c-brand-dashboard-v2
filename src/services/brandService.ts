@@ -136,7 +136,8 @@ export class BrandService {
       targetAudience: dbBrand.target_audience,
       createdAt: dbBrand.created_at,
       updatedAt: dbBrand.updated_at,
-      instagram_growth_7d: dbBrand.instagram_growth_7d
+      instagram_growth_7d: dbBrand.instagram_growth_7d,
+      moderator_score: dbBrand.moderator_score
     };
   }
 
@@ -156,6 +157,7 @@ export class BrandService {
     if (brandData.logoUrl) dbData.logo_url = brandData.logoUrl;
     if (brandData.ingredients) dbData.ingredients = brandData.ingredients;
     if (brandData.targetAudience) dbData.target_audience = brandData.targetAudience;
+    if ((brandData as any).moderator_score !== undefined) dbData.moderator_score = (brandData as any).moderator_score;
 
     return dbData;
   }

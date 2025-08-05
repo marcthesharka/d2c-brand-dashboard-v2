@@ -1,9 +1,7 @@
 // Analytics service for tracking brand performance and calculating hot scores
 
 export interface AnalyticsData {
-  websiteClicks: number;
-  instagramFollowersLastWeek: number;
-  instagramGrowthWoW: number;
+  currentInstagramFollowers: number;
   hotScore: number;
   lastUpdated: string;
 }
@@ -31,56 +29,31 @@ class AnalyticsService {
     }
   }
 
-  // Track website click for a brand
-  trackWebsiteClick(brandId: string): void {
-    const analytics = this.getAnalyticsData();
-    
-    if (!analytics[brandId]) {
-      analytics[brandId] = this.createDefaultAnalytics();
-    }
-    
-    analytics[brandId].websiteClicks += 1;
-    analytics[brandId].hotScore = this.calculateHotScore(analytics[brandId]);
-    analytics[brandId].lastUpdated = new Date().toISOString();
-    
-    this.saveAnalyticsData(analytics);
-  }
-
-  // Update Instagram followers and calculate growth
+  // Update Instagram followers
   updateInstagramFollowers(brandId: string, currentFollowers: number): void {
     const analytics = this.getAnalyticsData();
     
     if (!analytics[brandId]) {
       analytics[brandId] = this.createDefaultAnalytics();
-      analytics[brandId].instagramFollowersLastWeek = currentFollowers;
     }
     
-    // Calculate week-over-week growth
-    const lastWeekFollowers = analytics[brandId].instagramFollowersLastWeek;
-    if (lastWeekFollowers > 0) {
-      analytics[brandId].instagramGrowthWoW = 
-        ((currentFollowers - lastWeekFollowers) / lastWeekFollowers) * 100;
-    }
-    
+    analytics[brandId].currentInstagramFollowers = currentFollowers;
     analytics[brandId].hotScore = this.calculateHotScore(analytics[brandId]);
     analytics[brandId].lastUpdated = new Date().toISOString();
     
     this.saveAnalyticsData(analytics);
   }
 
-  // Calculate hot score based only on Instagram growth
+  // Calculate hot score (this will be overridden by the new calculation in App.tsx)
   calculateHotScore(analytics: AnalyticsData): number {
-    // Normalize Instagram growth (10% growth = 50 points max)
-    const growthScore = Math.min((analytics.instagramGrowthWoW / 10) * 100, 100);
-    return growthScore;
+    // This is a placeholder - the actual calculation is now done in App.tsx
+    return analytics.hotScore || 0;
   }
 
   // Create default analytics object
   createDefaultAnalytics(): AnalyticsData {
     return {
-      websiteClicks: 0,
-      instagramFollowersLastWeek: 0,
-      instagramGrowthWoW: 0,
+      currentInstagramFollowers: 0,
       hotScore: 0,
       lastUpdated: new Date().toISOString()
     };
@@ -88,14 +61,8 @@ class AnalyticsService {
 
   // Generate sample analytics data for demo purposes
   generateSampleAnalytics(brandId: string, currentFollowers: number): AnalyticsData {
-    const baseClicks = Math.floor(Math.random() * 500) + 50;
-    const baseGrowth = (Math.random() - 0.5) * 20; // -10% to +10%
-    const lastWeekFollowers = Math.floor(currentFollowers / (1 + baseGrowth / 100));
-    
     const analytics: AnalyticsData = {
-      websiteClicks: baseClicks,
-      instagramFollowersLastWeek: lastWeekFollowers,
-      instagramGrowthWoW: baseGrowth,
+      currentInstagramFollowers: currentFollowers,
       hotScore: 0,
       lastUpdated: new Date().toISOString()
     };

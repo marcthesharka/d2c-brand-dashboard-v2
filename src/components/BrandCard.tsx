@@ -211,7 +211,7 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
                 <Flame className="h-3 w-3 mr-1 text-red-600" />
                 Analytics
               </h4>
-              <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
                 <div className="bg-white p-2 rounded border">
                   <div className="text-gray-500">Rating</div>
                   <div className="font-medium text-gray-900 flex items-center">
@@ -220,14 +220,8 @@ const BrandCard: React.FC<BrandCardProps> = ({ brand, onWebsiteClick }) => {
                   </div>
                 </div>
                 <div className="bg-white p-2 rounded border">
-                  <div className="text-gray-500">Website Clicks</div>
-                  <div className="font-medium text-gray-900">{brand.analytics.websiteClicks.toLocaleString()}</div>
-                </div>
-                <div className="bg-white p-2 rounded border">
-                  <div className="text-gray-500">IG Growth WoW</div>
-                  <div className="font-medium text-gray-900">
-                    {brand.analytics.instagramGrowthWoW > 0 ? '+' : ''}{brand.analytics.instagramGrowthWoW.toFixed(1)}%
-                  </div>
+                  <div className="text-gray-500">Current IG Followers</div>
+                  <div className="font-medium text-gray-900">{brand.analytics.currentInstagramFollowers.toLocaleString()}</div>
                 </div>
                 <div className="bg-white p-2 rounded border">
                   <div className="text-gray-500">Hot Score</div>
