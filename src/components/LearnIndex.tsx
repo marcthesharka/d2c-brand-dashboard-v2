@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '6',
+    title: "The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate",
+    description: "Discover the best caffeine alternatives that give you energy without the coffee jitters. From energy drinks to mushroom beverages, find your perfect pick-me-up.",
+    slug: 'coffee-alternatives-energy-drinks-mushroom-drinks-yerba-mate',
+    publishedDate: '2025-01-25',
+    readTime: '5 min read',
+    category: 'Product Reviews'
+  },
+  {
     id: '5',
     title: "Top 10 Protein-to-Calorie Ratio Foods for Building Lean Muscle (2025)",
     description: "Discover the best protein-rich foods for muscle building that you can easily find at any grocery store. From steak to chickpeas, we break down the top 10 foods with the highest protein-to-calorie ratios for optimal lean muscle growth.",

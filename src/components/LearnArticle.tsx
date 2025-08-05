@@ -17,6 +17,138 @@ interface Article {
 }
 
 const articles: Record<string, Article> = {
+  'coffee-alternatives-energy-drinks-mushroom-drinks-yerba-mate': {
+    id: '6',
+    title: "The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate",
+    description: "Discover the best caffeine alternatives that give you energy without the coffee jitters. From energy drinks to mushroom beverages, find your perfect pick-me-up.",
+    slug: 'coffee-alternatives-energy-drinks-mushroom-drinks-yerba-mate',
+    content: `
+      <h2>The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate ☕</h2>
+      
+      <div style="text-align:center;margin:2rem 0;display:flex;flex-direction:column;align-items:center;">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2N0YzdvNXd4dXNtOWtnbW04MDE1Nm9teGZtYzZzYXpucm4ydmMxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/93lEttRMS3UpxcIvPG/giphy.gif" alt="Energy drink GIF" style="max-width:400px;border-radius:0.5rem;display:block;margin:0 auto;" />
+        <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">Coffee isn't the only way to get your daily energy boost!</div>
+      </div>
+
+      <p><strong>Listen up, caffeine seekers:</strong> Coffee isn't the only way to get your daily energy boost. Whether you're looking to cut back on caffeine, try something new, or find a healthier alternative, there's a whole world of energizing beverages waiting to be discovered.</p>
+
+      <p>We've tested energy drinks, mushroom beverages, and traditional alternatives to bring you the ultimate guide to coffee alternatives. Let's dive into how each one makes you feel and how they compare to your morning cup of joe.</p>
+
+      <h3>Energy Drinks: The Modern Coffee Alternative</h3>
+      <p>Energy drinks have evolved far beyond the neon-colored cans of the early 2000s. Today's options offer sophisticated flavors, better ingredients, and more targeted energy effects.</p>
+
+      <h4>⚡ Celsius: "Legal Adderall" for Maximum Productivity</h4>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Celsius energy drink" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 200mg per can</p>
+      <p><strong>Coffee Equivalent:</strong> ~2 cups of coffee</p>
+      <p><strong>How It Makes You Feel:</strong> Celsius is the energy drink that makes you want to bounce off walls. It's like legal Adderall - no wonder people drink it constantly at work. The energy is intense and focused, perfect for powering through work sessions or intense workouts. Just be prepared for the crash when it wears off.</p>
+      <p><strong>Best For:</strong> Work, intense focus, productivity</p>
+
+      <h4>🎉 Gorgie: Party Energy Without the Crazy Buzz</h4>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Gorgie energy drink" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 150mg per can</p>
+      <p><strong>Coffee Equivalent:</strong> ~1.5 cups of coffee</p>
+      <p><strong>How It Makes You Feel:</strong> Gorgie is the energy drink that makes you want to party with the girlies. It gives you a nice energy boost without making you feel crazy buzzed or jittery. The energy is more social and uplifting, perfect for nights out or social gatherings where you want to stay energized without feeling overstimulated.</p>
+      <p><strong>Best For:</strong> Social events, parties, socializing</p>
+
+      <h4>💀 Liquid Death Sparkling Energy: The Cool Kid's Choice</h4>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Liquid Death energy drink" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 100mg per can</p>
+      <p><strong>Coffee Equivalent:</strong> ~1 cup of coffee</p>
+      <p><strong>How It Makes You Feel:</strong> Liquid Death's sparkling energy drinks are perfect for when you need just a little bump while at a function. Plus, you'll look super cool while drinking it. The sleek can design and sparkling format make it feel more like a premium beverage than a traditional energy drink.</p>
+      <p><strong>Best For:</strong> Social functions, looking cool, light energy boost</p>
+
+      <h3>🍄 Mushroom Drinks: The Health-Conscious Alternative</h3>
+      <p>Mushroom drinks offer a different kind of energy - one that's more sustainable and comes without the typical caffeine crash. These adaptogenic beverages are gaining popularity among health-conscious consumers.</p>
+
+      <h4>🌿 MUDWATER: Healthy But Not Ideal</h4>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="MUDWATER mushroom drink" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 0mg (adaptogenic mushrooms only)</p>
+      <p><strong>Coffee Equivalent:</strong> 0 cups (different type of energy)</p>
+      <p><strong>How It Makes You Feel:</strong> MUDWATER is pretty rough to be honest. The powder tends to settle at the bottom of the mug of hot water, making it not ideal as a coffee alternative. The taste isn't super great either. That said, it is much healthier for you and creates less of a high and crash that caffeine does. I just stopped drinking it after a couple weeks because it was gross.</p>
+      <p><strong>Best For:</strong> Health-conscious individuals, sustainable energy</p>
+
+      <h4>🌱 Ryze: The Mushroom Drink to Watch</h4>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ryze mushroom drink" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 0mg (adaptogenic mushrooms only)</p>
+      <p><strong>Coffee Equivalent:</strong> 0 cups (different type of energy)</p>
+      <p><strong>How It Makes You Feel:</strong> Ryze is on our radar but we haven't tried it yet. We'll get to that one soon and update this guide with our findings. It's another mushroom-based energy drink that promises similar benefits to MUDWATER but hopefully with better taste and texture.</p>
+      <p><strong>Best For:</strong> TBD - still need to try it!</p>
+
+      <h3>🍃 Yerba Mate: The Dark Horse of Energy Drinks</h3>
+      <img src="https://images.unsplash.com/photo-1622547748225-eeba8e860e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Yerba Mate tea" style="max-width:300px;border-radius:0.5rem;margin-bottom:1rem;" />
+      <p><strong>Caffeine Content:</strong> 80-150mg per serving (varies by brand)</p>
+      <p><strong>Coffee Equivalent:</strong> ~0.8-1.5 cups of coffee</p>
+      <p><strong>How It Makes You Feel:</strong> Yerba Mate is the dark horse of energy drinks. It's a tasty drink that's not crazy caffeinated, and you can drink it at work or at a party to give you an extra boost. What makes Yerba Mate special is its versatility. It's socially acceptable to drink at work, it's great for parties, and it provides a smooth, sustained energy boost without the crash.</p>
+      <p><strong>Best For:</strong> Work, parties, versatile energy boost</p>
+
+      <h3>📊 Caffeine Comparison Chart</h3>
+      <div style="background:#f8fafc;padding:1.5rem;border-radius:0.5rem;margin:1.5rem 0;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <th style="text-align:left;padding:0.75rem;font-weight:600;">Beverage</th>
+              <th style="text-align:left;padding:0.75rem;font-weight:600;">Caffeine (mg)</th>
+              <th style="text-align:left;padding:0.75rem;font-weight:600;">Coffee Equivalent</th>
+              <th style="text-align:left;padding:0.75rem;font-weight:600;">Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:0.75rem;">Celsius</td>
+              <td style="padding:0.75rem;">200</td>
+              <td style="padding:0.75rem;">2 cups</td>
+              <td style="padding:0.75rem;">Work, intense focus</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:0.75rem;">Gorgie</td>
+              <td style="padding:0.75rem;">150</td>
+              <td style="padding:0.75rem;">1.5 cups</td>
+              <td style="padding:0.75rem;">Social events, parties</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:0.75rem;">Liquid Death Energy</td>
+              <td style="padding:0.75rem;">100</td>
+              <td style="padding:0.75rem;">1 cup</td>
+              <td style="padding:0.75rem;">Light boost, social functions</td>
+            </tr>
+            <tr style="border-bottom:1px solid #e2e8f0;">
+              <td style="padding:0.75rem;">Yerba Mate</td>
+              <td style="padding:0.75rem;">80-150</td>
+              <td style="padding:0.75rem;">0.8-1.5 cups</td>
+              <td style="padding:0.75rem;">Versatile, work or social</td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;">MUDWATER</td>
+              <td style="padding:0.75rem;">0</td>
+              <td style="padding:0.75rem;">0 cups</td>
+              <td style="padding:0.75rem;">Health-conscious, sustainable energy</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>🎯 How to Choose Your Perfect Coffee Alternative</h3>
+      <p>When choosing your coffee alternative, consider these factors:</p>
+      <ul>
+        <li><strong>Caffeine sensitivity:</strong> If you're sensitive to caffeine, start with Yerba Mate or Liquid Death</li>
+        <li><strong>Use case:</strong> Need intense focus? Go with Celsius. Want social energy? Try Gorgie</li>
+        <li><strong>Health goals:</strong> Looking for something healthier? Mushroom drinks might be your best bet</li>
+        <li><strong>Taste preferences:</strong> Don't underestimate the importance of actually enjoying what you're drinking</li>
+        <li><strong>Sustainability:</strong> Consider how the energy boost affects you throughout the day</li>
+      </ul>
+
+      <h3>Final Thoughts</h3>
+      <p>Coffee alternatives have come a long way, offering everything from intense energy boosts to gentle, sustainable options. The key is finding what works for your lifestyle and energy needs.</p>
+      <p>Whether you're looking to cut back on coffee, try something new, or find a healthier energy source, there's an alternative out there for you. Start with the caffeine content that matches your current coffee intake and adjust from there.</p>
+      <p>Remember, the best coffee alternative is the one you'll actually drink and enjoy. Don't be afraid to experiment until you find your perfect match!</p>
+    `,
+    publishedDate: '2025-01-25',
+    readTime: '5 min read',
+    category: 'Product Reviews',
+    author: 'Bodega Moderators',
+    tags: ['coffee alternatives', 'energy drinks', 'caffeine alternatives', 'Celsius', 'Gorgie', 'Liquid Death', 'MUDWATER', 'Ryze', 'Yerba Mate', 'mushroom drinks', 'adaptogenic beverages', 'energy boost', 'productivity drinks', 'healthy energy', '2025']
+  },
   'top-10-protein-calorie-ratio-foods-building-lean-muscle-2025': {
     id: '5',
     title: "Top 10 Protein-to-Calorie Ratio Foods for Building Lean Muscle (2025)",
