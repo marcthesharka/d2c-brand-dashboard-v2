@@ -167,13 +167,9 @@ const App: React.FC = () => {
 
   // Handle website click tracking
   const handleWebsiteClick = (brandId: string) => {
-    analyticsService.trackWebsiteClick(brandId);
-    // Update the brand's analytics in state
-    setBrands(prev => prev.map(brand => 
-      brand.id === brandId 
-        ? { ...brand, analytics: analyticsService.getBrandAnalytics(brandId) || undefined }
-        : brand
-    ));
+    // Website click tracking removed as part of hot score revision
+    // The actual website opening is now handled in the BrandCard component
+    console.log(`Website click tracked for brand ID: ${brandId}`);
   };
 
   // Handle brand added
