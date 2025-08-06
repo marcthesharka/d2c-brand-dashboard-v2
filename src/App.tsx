@@ -226,6 +226,16 @@ const App: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Bodega - Curated D2C Food & Beverage Brands</title>
+        <meta name="description" content="Discover the best direct-to-consumer food and beverage brands. We curate, you browse. Find your next favorite snack, drink, or meal." />
+        <meta name="keywords" content="D2C food brands, food business, beverage brands, Instagram marketing, food startup, direct to consumer" />
+        <meta property="og:title" content="Bodega - Curated D2C Food & Beverage Brands" />
+        <meta property="og:description" content="Discover the best direct-to-consumer food and beverage brands. We curate, you browse." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://d2cbodega.com" />
+        <link rel="canonical" href="https://d2cbodega.com" />
+      </Helmet>
       <Routes>
         <Route path="/learn" element={<LearnIndex onAddBrand={() => setShowAddForm(true)} />} />
         <Route path="/learn/:slug" element={<LearnArticle onAddBrand={() => setShowAddForm(true)} />} />

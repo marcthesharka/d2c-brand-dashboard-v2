@@ -4,5 +4,11 @@ Allow: /
 # Sitemap
 Sitemap: https://d2cbodega.com/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1 
+# Allow all crawlers to access the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# No crawl delay to ensure faster indexing 
