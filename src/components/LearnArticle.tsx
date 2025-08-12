@@ -26,7 +26,7 @@ const articles: Record<string, Article> = {
       <h2>Where to Find High-Quality Food in America: The Italian Food Experience vs. US Food Systems 🍅</h2>
       
       <div style="text-align:center;margin:2rem 0;display:flex;flex-direction:column;align-items:center;">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fresh Italian ingredients" style="max-width:400px;border-radius:0.5rem;display:block;margin:0 auto;" />
+        <img src="https://blog.italotreno.com/wp-content/uploads/2023/10/Cosa_mangiare_Roma_10_piatti_imperdibili.jpg" alt="Traditional Italian dishes and ingredients" style="max-width:400px;border-radius:0.5rem;display:block;margin:0 auto;" />
         <div style="font-size:0.95em;color:#64748b;margin-top:0.5rem;">The difference between eating in Italy vs. America is night and day</div>
       </div>
 
