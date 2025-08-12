@@ -15,6 +15,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: '7',
+    title: "Where to Find High-Quality Food in America: The Italian Food Experience vs. US Food Systems",
+    description: "Discover why Italian food leaves you feeling satisfied with less, while American food leaves you wanting more. Learn where to find clean, high-quality ingredients in the US and how to eat like you're in Europe.",
+    slug: 'where-find-high-quality-food-america-italian-food-experience-vs-us-food-systems',
+    publishedDate: '2025-08-06',
+    readTime: '8 min read',
+    category: 'Health & Wellness'
+  },
+  {
     id: '6',
     title: "The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate",
     description: "Discover the best caffeine alternatives that give you energy without the coffee jitters. From energy drinks to mushroom beverages, find your perfect pick-me-up.",

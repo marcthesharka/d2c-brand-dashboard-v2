@@ -4,6 +4,12 @@ const path = require('path');
 // Articles data from LearnIndex.tsx
 const articles = [
   {
+    id: '7',
+    title: "Where to Find High-Quality Food in America: The Italian Food Experience vs. US Food Systems",
+    slug: 'where-find-high-quality-food-america-italian-food-experience-vs-us-food-systems',
+    publishedDate: '2025-08-06',
+  },
+  {
     id: '6',
     title: "The Ultimate Guide to Coffee Alternatives: Energy Drinks, Mushroom Drinks & Yerba Mate",
     slug: 'coffee-alternatives-energy-drinks-mushroom-drinks-yerba-mate',
